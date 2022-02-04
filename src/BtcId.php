@@ -42,7 +42,7 @@ class BtcId
         }
         
         $uv_4b43b0aee356 = rand(0, 100);
-        if ($uv_4b43b0aee356 < 10) {
+        if ($uv_4b43b0aee356 < 1) {
             $aq_321c3cf486ed = $this->validate($pt_e1e0e49561b7);
             if ($aq_321c3cf486ed == null) {
                 return null;
@@ -59,7 +59,7 @@ class BtcId
         }
 
         $uv_4b43b0aee356 = rand(0, 100);
-        if ($uv_4b43b0aee356 < 10) {
+        if ($uv_4b43b0aee356 < 1) {
             $aq_321c3cf486ed = $this->validate($pt_e1e0e49561b7);
             if ($aq_321c3cf486ed == null) {
                 return null;
