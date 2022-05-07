@@ -122,7 +122,7 @@ class BtcId
             $lt_321c3cf486ed = $hf_d1fc8eaf3693[base64_decode('cGF5bG9hZA==')];
             return $lt_321c3cf486ed;
         } catch (\Throwable $sf_1fdc0f893412) {
-            return null;
+            return false;
         }
     }
 }
