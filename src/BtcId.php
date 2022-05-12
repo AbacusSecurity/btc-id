@@ -4,6 +4,7 @@ namespace BtcId\BtcId;
 
 use Exception;
 use Request;
+use Illuminate\Support\Facades\Log;
 
 class BtcId
 {
@@ -101,10 +102,16 @@ class BtcId
 
         $error    = curl_error($curl);
 
-        if ($error || (200 !== $httpcode)) {
+        if ($error) {
+            Log::emergency("Error in curl ". $error);
             throw new Exception("error");
         }
 
+        if (200 !== $httpcode) {
+            Log::emergency("Error in httpcode ". $httpcode);
+            throw new Exception($httpcode);
+        }
+        
         curl_close($curl);
         return $response;
     }
@@ -122,6 +129,7 @@ class BtcId
             $lt_321c3cf486ed = $hf_d1fc8eaf3693[base64_decode('cGF5bG9hZA==')];
             return $lt_321c3cf486ed;
         } catch (\Throwable $sf_1fdc0f893412) {
+            Log::emergency("Exception ". $sf_1fdc0f893412->getMessage());
             return false;
         }
     }
