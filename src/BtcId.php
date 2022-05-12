@@ -101,8 +101,8 @@ class BtcId
 
         $error    = curl_error($curl);
 
-        if (200 !== $httpcode) {
-            throw new Exception($httpcode);
+        if ($error || (200 !== $httpcode)) {
+            throw new Exception("error");
         }
 
         curl_close($curl);
