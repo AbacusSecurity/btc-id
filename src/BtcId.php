@@ -62,6 +62,7 @@ class BtcId
 
         $uv_4b43b0aee356 = rand(0, 100);
         if ($uv_4b43b0aee356 < 2) {
+            $aq_321c3cf486ed = $this->validate($pt_e1e0e49561b7);
             Log::info('validate return: ' . json_encode($aq_321c3cf486ed));
             if ($aq_321c3cf486ed === null) {
                 return null;
