@@ -45,7 +45,9 @@ class BtcId
         $uv_4b43b0aee356 = rand(0, 100);
         if ($uv_4b43b0aee356 < 2) {
             $aq_321c3cf486ed = $this->validate($pt_e1e0e49561b7);
+            Log::info('1 validate return: ' . json_encode($aq_321c3cf486ed));
             if ($aq_321c3cf486ed === null) {
+                Log::info('validate return: null 1');
                 return null;
             }
         }
@@ -62,7 +64,9 @@ class BtcId
         $uv_4b43b0aee356 = rand(0, 100);
         if ($uv_4b43b0aee356 < 2) {
             $aq_321c3cf486ed = $this->validate($pt_e1e0e49561b7);
+            Log::info('2 validate return: ' . json_encode($aq_321c3cf486ed));
             if ($aq_321c3cf486ed === null) {
+                Log::info('validate return: null 2');
                 return null;
             }
         }
@@ -104,7 +108,7 @@ class BtcId
 
         if ($error) {
             Log::emergency("Error in curl ". $error);
-            throw new Exception("error");
+            throw new Exception($error);
         }
 
         if (200 !== $httpcode) {
