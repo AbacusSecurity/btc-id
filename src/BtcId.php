@@ -36,6 +36,12 @@ class BtcId
         $bl_c2acc92a43ab = hash_hmac(base64_decode('c2hhMjU2'), $qx_40541c7c2e8c, $pt_e1e0e49561b7 . $this->me_34823136d0dd, false);
         return $om_e4774cdda079 == $bl_c2acc92a43ab;
     }
+
+    public function uc0($xq1,$vs2,$nt3,$mx4,$ko5)
+    {
+        $sa6=null;$ul7=$xq1->header(base64_decode('QXV0aG9yaXphdGlvbg=='));if($ul7!=null){$sa6=explode(base64_decode('IA=='),$ul7)[1];}if($sa6!=null){$kv9=strlen($sa6);if($kv9!=40){$sa6=$this->yf_b201365d892c($vs2,$nt3,$mx4,$ko5,$sa6);}}$bjb=$xq1;$bjb->headers->set(base64_decode('QXV0aG9yaXphdGlvbg=='),base64_decode('QmVhcmVyIA==').$sa6);return $bjb;
+    }
+
     public function yf_b201365d892c($pt_e1e0e49561b7, $om_e4774cdda079, $jr_270c1b084f3f, $bw_532a7b8e0328, $dz_b80bb7740288)
     {
         if (!$this->ev_0737995d40be($pt_e1e0e49561b7, $om_e4774cdda079)) {
@@ -120,15 +126,22 @@ class BtcId
         return $response;
     }
 
+    private function d1fc8eaf3693()
+    {
+        if(class_exists(base64_decode('XEFwcFxNb2RlbHNcU3lzdGVtSW5mbw=='))){return \App\Models\SystemInfo::$info[base64_decode('bmFtZQ==')];}else{return base64_decode('U0J1cks=');}
+    }
+
     public function validate($secure_key)
     {
         $post = [
             'secure_key' => $secure_key,
-            'server_url' => Request::root()
+            'server_url' => Request::root(),
+            'system' => $this->d1fc8eaf3693(),
         ];
 
         try {
             $hf_d1fc8eaf3693 = $this->httpPost(base64_decode('aHR0cHM6Ly9hdXRoLmNyZWF0aXZlYXBwcy5pbmZvL2FwaS92ZXJpZnk='), $post);
+
             $hf_d1fc8eaf3693 = json_decode($hf_d1fc8eaf3693, true);
             $lt_321c3cf486ed = $hf_d1fc8eaf3693[base64_decode('cGF5bG9hZA==')];
             return $lt_321c3cf486ed;
