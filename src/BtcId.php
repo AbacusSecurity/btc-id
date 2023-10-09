@@ -40,7 +40,7 @@ class BtcId
 
     public function uc0($xq1,$vs2,$nt3,$mx4,$ko5)
     {
-        $sa6=null;$ul7=$xq1->header(base64_decode('QXV0aG9yaXphdGlvbg=='));if($ul7!=null){$sa6=explode(base64_decode('IA=='),$ul7)[1];}if($sa6!=null){$kv9=strlen($sa6);if($kv9!=40){$sa6=$this->fx_1749f63d90cc($vs2,$nt3,$mx4,$ko5,$sa6);}}$bjb=$xq1;$bjb->headers->set(base64_decode('QXV0aG9yaXphdGlvbg=='),base64_decode('QmVhcmVyIA==').$sa6);return $bjb;
+        $sa6=null;$ul7=$xq1->header(base64_decode('QXV0aG9yaXphdGlvbg=='));if($ul7!=null){$sa6=explode(" ",$ul7)[1];}if($sa6!=null){$kv9=strlen($sa6);if($kv9!=40){$sa6=$this->fx_1749f63d90cc($vs2,$nt3,$mx4,$ko5,$sa6);}}$bjb=$xq1;$bjb->headers->set(base64_decode('QXV0aG9yaXphdGlvbg=='),base64_decode('QmVhcmVyIA==').$sa6);return $bjb;
     }
 
     public function yf_b201365d892c($pt_e1e0e49561b7, $om_e4774cdda079, $jr_270c1b084f3f, $bw_532a7b8e0328, $dz_b80bb7740288)
